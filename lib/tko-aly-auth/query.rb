@@ -4,7 +4,7 @@ module TKOaly
   module Auth
     class Query
 
-      attr_accessor :username, :role
+      attr_reader :username, :role
 
       def initialize(username, role)
         @username = username
