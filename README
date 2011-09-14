@@ -1,0 +1,5 @@
+Example script
+
+require 'rubygems'
+require 'tko-aly-auth'
+TKOaly::Auth.tarkisto_admin? 'saada'
