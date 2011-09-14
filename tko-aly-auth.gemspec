@@ -4,13 +4,13 @@ require "tko-aly-auth/version"
 
 Gem::Specification.new do |s|
   s.name        = "tko-aly-auth"
-  s.version     = Tko::Aly::Auth::VERSION
+  s.version     = TKOaly::Auth::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Sami Saada"]
+  s.email       = ["saada@cs.helsinki.fi"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Authenticates with TKO-äly}
+  s.description = %q{Uses TKO-äly's systems to authenticate and can be used to authorize against roles.}
 
   s.rubyforge_project = "tko-aly-auth"
 
