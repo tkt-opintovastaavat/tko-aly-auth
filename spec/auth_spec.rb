@@ -30,4 +30,24 @@ describe TKOaly::Auth do
 
   end
 
+  describe "tarkisto admin" do
+
+    before(:each) do
+      @tarkisto_admin_group = 'ExamOfficer'
+    end
+
+    it "should tell if user can administrate tarkisto" do
+      valid_admin_user = 'saada'
+      TKOaly::Auth.should_receive(:generic_question).with(valid_admin_user, @tarkisto_admin_group).and_return(true)
+      TKOaly::Auth.tarkisto_admin?(valid_admin_user).should be_true
+    end
+
+    it "should tell if user can not administrate tarkisto" do
+      invalid_admin_user = 'l33th4x0r'
+      TKOaly::Auth.should_receive(:generic_question).with(invalid_admin_user, @tarkisto_admin_group).and_return(false)
+      TKOaly::Auth.tarkisto_admin?(invalid_admin_user).should be_false
+    end
+
+  end
+
 end

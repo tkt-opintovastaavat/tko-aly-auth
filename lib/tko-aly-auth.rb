@@ -11,5 +11,9 @@ module TKOaly
       auth_response.belongs?
     end
 
+    def self.tarkisto_admin?(username)
+      self.generic_question(username, 'ExamOfficer')
+    end
+
   end
 end
