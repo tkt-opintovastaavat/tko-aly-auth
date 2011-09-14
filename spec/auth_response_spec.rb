@@ -26,12 +26,8 @@ describe TKOaly::Auth::Response do
       @auth_response.code.should == @code
     end
 
-    it "should have username" do
-      @auth_response.username.should == @username
-    end
-
     it "should tell if username belongs to role" do
-      @auth_response.belongs?(@username).should be_true
+      @auth_response.should be_belongs
     end
 
   end
