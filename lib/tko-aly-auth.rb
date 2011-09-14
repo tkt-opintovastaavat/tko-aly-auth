@@ -1,4 +1,5 @@
 require 'tko-aly-auth/query'
+require 'tko-aly-auth/response'
 
 module TKOaly
   module Auth
