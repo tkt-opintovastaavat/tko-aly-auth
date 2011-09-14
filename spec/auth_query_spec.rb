@@ -20,4 +20,14 @@ describe TKOaly::Auth::Query do
 
   end
 
+  describe "query formation" do
+
+    it "should format query after username and role" do
+      server = 'http://members.tko-aly.fi/'
+      path = "externals/is#{@role}/#{@username}"
+      @query.url.should == (server + path)
+    end
+
+  end
+
 end

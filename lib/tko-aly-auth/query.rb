@@ -9,6 +9,10 @@ module TKOaly
         @role = role
       end
 
+      def url
+        "http://members.tko-aly.fi/externals/is#{@role}/#{@username}"
+      end
+
     end
   end
 end
