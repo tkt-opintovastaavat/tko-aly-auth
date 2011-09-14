@@ -30,4 +30,21 @@ describe TKOaly::Auth::Query do
 
   end
 
+  describe "fetch query" do
+
+    it "should fetch query and get response" do
+      @fake_url = 'http://example.com/foo/bar'
+      @fake_uri = URI.parse(@fake_url)
+      @fake_response = Net::HTTPResponse.new 'foo', 'bar', 'baz'
+      @query.should_receive(:url).and_return(@fake_url)
+
+      Net::HTTP.should_receive(:get_response).with(@fake_uri).and_return(@fake_response)
+
+      @response = @query.fetch
+
+      @response.class.ancestors.should be_include(Net::HTTPResponse)
+    end
+
+  end
+
 end

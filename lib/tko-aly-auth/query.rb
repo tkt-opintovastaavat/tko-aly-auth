@@ -1,3 +1,5 @@
+require 'net/http'
+
 module TKOaly
   module Auth
     class Query
@@ -11,6 +13,11 @@ module TKOaly
 
       def url
         "http://members.tko-aly.fi/externals/is#{@role}/#{@username}"
+      end
+
+      def fetch
+        uri = URI.parse(self.url)
+        Net::HTTP.get_response(uri)
       end
 
     end
