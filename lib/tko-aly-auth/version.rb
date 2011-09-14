@@ -1,0 +1,7 @@
+module Tko
+  module Aly
+    module Auth
+      VERSION = "0.0.1"
+    end
+  end
+end
