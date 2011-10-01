@@ -1,7 +1,7 @@
-Example script
+=== Example script
 
-require 'rubygems'
-require 'tko-aly-auth'
-TKOaly::Auth.tarkisto_admin? 'saada'
+  require 'rubygems'
+  require 'tko-aly-auth'
+  TKOaly::Auth.tarkisto_admin? 'saada'
 
-https://secure.travis-ci.org/tkt-opintovastaavat/tko-aly-auth.png
+!https://secure.travis-ci.org/tkt-opintovastaavat/tko-aly-auth.png
